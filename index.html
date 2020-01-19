@@ -100,7 +100,7 @@ img0.onload = function(){
 
   //Function to run the model
   async function run(){
-    model = await tf.loadLayersModel(MODEL_URL);
+    model = await tf.loadGraphModel(MODEL_URL);
     console.log('Succesfully loaded model');
     console.log(model)
     var image = null;
