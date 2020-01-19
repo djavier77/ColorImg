@@ -97,17 +97,10 @@ img0.onload = function(){
   };
   img.src = idata;
 }
-import * as tf from '@tensorflow/tfjs';
-    import {loadGraphModel} from '@tensorflow/tfjs-converter';
+
   //Function to run the model
   async function run(){
-    
-
-    const MODEL_URL = 'output2/model.json';
-	  
-    const model = await tf.loadGraphModel(MODEL_URL);
-	  
-   
+    const model = await tf.loadGraphModel(MODEL_URL); 
     console.log('Succesfully loaded model');
     console.log(model)
     var image = null;
