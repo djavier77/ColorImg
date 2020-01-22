@@ -54,7 +54,7 @@ img0.onload = function(){
 	ctx.drawImage(img0, 0,0, img0.width, img0.height, 0,0,512,512);
 };
 
-  const MODEL_URL = 'output2/model.json';
+  const MODEL_URL = 'output3/model.json';
   
   function thisFileUpload() {
     document.getElementById("file").click(); 
@@ -100,7 +100,7 @@ img0.onload = function(){
 
   //Function to run the model
   async function run(){
-    const model = await tf.loadModel(MODEL_URL); 
+    model = await tf.loadGraphModel(MODEL_URL); 
     console.log('Succesfully loaded model');
     console.log(model)
     var image = null;
