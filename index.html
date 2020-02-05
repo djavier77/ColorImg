@@ -90,7 +90,7 @@ img0.onload = function(){
       reader.onload = function(e) {
         document.getElementById('original1').src = drawimg(e.target.result);
         //run the model
-        run()
+        run();
 	run2()
       };
       reader.readAsDataURL(file);
