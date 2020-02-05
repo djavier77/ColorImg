@@ -39,7 +39,7 @@
   </div>
 </body>
 <script>
-
+	
 var c = document.getElementById("original2");
 var ctx0 = c.getContext("2d");
 var img = new Image();
@@ -61,6 +61,8 @@ img0.onload = function(){
 	ctx.drawImage(img0, 0,0, img0.width, img0.height, 0,0,512,512);
 };
 
+
+	
   const MODEL_URL = 'output200/model.json';
   const MODEL_URL2 = 'output4/model.json';
   
@@ -163,7 +165,7 @@ async function run2(){
     var result = null;
     var newimage = null;
     if(model != null & file != null){
-      image = document.getElementById("original10")
+      image = document.getElementById("original2")
       console.log("Running");
       // Execute
       file = tf.browser.fromPixels(image)
