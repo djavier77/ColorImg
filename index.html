@@ -90,8 +90,8 @@ img0.onload = function(){
       reader.onload = function(e) {
         document.getElementById('original1').src = drawimg(e.target.result);
         //run the model
-        run();
-	run2()
+        run()
+	
       };
       reader.readAsDataURL(file);
     }    
@@ -152,6 +152,9 @@ img0.onload = function(){
       // Refresh images 
       canvas_result = document.getElementById("original2");
       prova = tf.browser.toPixels(result, canvas_result)
+
+	    run2()
+	    
     } else {
       alert("Something went wrong :(")
     }
