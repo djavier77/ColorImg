@@ -108,7 +108,7 @@ img0.onload = function(){
   };
   img.src = idata;
 }
-
+var res = null;
   //Function to run the model
   async function run(){
     model = await tf.loadGraphModel(MODEL_URL); 
@@ -132,7 +132,8 @@ img0.onload = function(){
       file = file.sub(1)
       // Predict
       console.log("Let's predict")
-      result= model.predict(file)
+      res = result= model.predict(file)
+	    
       console.log("Done")
       result = result.reshape([512,512,3])
       
@@ -171,7 +172,8 @@ async function run2(){
       image = document.getElementById("original2")
       console.log("Running");
       // Execute
-      file = tf.browser.fromPixels(image)
+	    
+      file = tf.browser.fromPixels(res)
       console.log(file.shape)
       // Reshape
       file = file.reshape([1 ,512, 512, 3])
