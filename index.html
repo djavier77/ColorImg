@@ -91,7 +91,7 @@ img0.onload = function(){
         document.getElementById('original1').src = drawimg(e.target.result);
         //run the model
         run()
-	
+	run2()
       };
       reader.readAsDataURL(file);
     }    
@@ -154,7 +154,7 @@ var res = null;
       canvas_result = document.getElementById("original2");
       prova = tf.browser.toPixels(result, canvas_result)
 
-	    run2()
+
 	    
     } else {
       alert("Something went wrong :(")
